@@ -1,0 +1,5 @@
+export { HomePage }  from './HomePage'
+export { Resume } from './Resume'
+export { ContactMe } from './ContactMe'
+export { Projects } from './Projects'
+export { Error } from './Error'
