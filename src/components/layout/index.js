@@ -1,0 +1,1 @@
+export { ResumeBlock } from './ResumeBlock'

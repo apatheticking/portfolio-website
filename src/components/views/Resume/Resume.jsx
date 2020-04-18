@@ -1,5 +1,9 @@
 import React, { useMemo } from 'react'
-import { SectionHeader } from 'components/parts/text/index'
+import { ResumeBlock } from 'components/layout/index'
+import { 
+    ResumeSummary,
+    ResumeExperience
+} from './resumeData'
 
 export function Resume() {
     // const title = 'summary'
@@ -8,10 +12,15 @@ export function Resume() {
     return (
         <div>
             <p>resume placeholder</p>  
-            <SectionHeader sectionTitle={'Summary'} subtext={'test test test'}/>
-            <SectionHeader sectionTitle={'Experience'} />
-            <SectionHeader sectionTitle={'Education'} />
-            <SectionHeader sectionTitle={'Projects'} />
+            <ResumeBlock 
+                sectionHeader={ResumeSummary.sectionHeader} 
+                content={ResumeSummary.content}
+            />
+            <ResumeBlock 
+                sectionHeader={ResumeExperience.sectionHeader} 
+                subtitle={ResumeExperience.subtitle} 
+                content={ResumeExperience.content}
+            />
             {/* {SectionA} */}
         </div>
     )
