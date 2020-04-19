@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export function HomePage() {
-    console.log('loading')
     return (
         <div>
             <h1>Hello</h1>

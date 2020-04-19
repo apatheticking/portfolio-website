@@ -1,27 +1,30 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { ResumeBlock } from 'components/layout/index'
 import { 
     ResumeSummary,
-    ResumeExperience
+    ResumeExperience,
+    ResumeEducation
 } from './resumeData'
 
 export function Resume() {
-    // const title = 'summary'
-    // const SectionA = useMemo( ()=> <SectionHeader sectionTitle={title} />, [title])
-
     return (
         <div>
             <p>resume placeholder</p>  
             <ResumeBlock 
+                key="resume-summary"
                 sectionHeader={ResumeSummary.sectionHeader} 
                 content={ResumeSummary.content}
             />
             <ResumeBlock 
+                key='resume-experience'
                 sectionHeader={ResumeExperience.sectionHeader} 
-                subtitle={ResumeExperience.subtitle} 
                 content={ResumeExperience.content}
             />
-            {/* {SectionA} */}
+            <ResumeBlock 
+                key='resume-education'
+                sectionHeader={ResumeEducation.sectionHeader} 
+                content={ResumeEducation.content}
+            />
         </div>
     )
 }
