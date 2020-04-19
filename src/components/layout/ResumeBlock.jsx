@@ -20,7 +20,7 @@ const getItems = (content) => {
 
 export const ResumeBlock = memo(function ResumeBlock({sectionHeader, content}) {
     return (
-        <div>
+        <div style={{textAlign: 'left'}}>
             <SectionHeader sectionTitle={sectionHeader.sectionTitle} subtext={sectionHeader.subtext}/>
             { getItems(content) }
         </div>

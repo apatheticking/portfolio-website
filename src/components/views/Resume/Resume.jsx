@@ -1,15 +1,20 @@
 import React from 'react'
 import { ResumeBlock } from 'components/layout/index'
+import { ResumeHeader } from 'components/parts/text/index'
+import { pageLayout } from 'components/styles/index' 
 import { 
     ResumeSummary,
     ResumeExperience,
-    ResumeEducation
+    ResumeEducation,
+    ResumeProjects
 } from './resumeData'
 
 export function Resume() {
+    const classes = pageLayout()
     return (
-        <div>
-            <p>resume placeholder</p>  
+        <div className={classes.root} >
+            <ResumeHeader />
+            {/* add a array.map to repeat the resumeBlocks*/}
             <ResumeBlock 
                 key="resume-summary"
                 sectionHeader={ResumeSummary.sectionHeader} 
@@ -24,6 +29,11 @@ export function Resume() {
                 key='resume-education'
                 sectionHeader={ResumeEducation.sectionHeader} 
                 content={ResumeEducation.content}
+            />
+            <ResumeBlock 
+                key='resume-project'
+                sectionHeader={ResumeProjects.sectionHeader} 
+                content={ResumeProjects.content}
             />
         </div>
     )

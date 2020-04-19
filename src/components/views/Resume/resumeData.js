@@ -99,3 +99,11 @@ export const ResumeEducation = {
         ]    
     }]
 }
+
+export const ResumeProjects = {
+    sectionHeader: { sectionTitle: "Projects", subtext: "coming soon - april 19th"},
+    content: [{
+        type: 'subtitle',
+        subtitle: { title: "Project Placeholder", subtext: "coming soon"}
+    }]
+}
