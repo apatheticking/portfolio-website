@@ -7,11 +7,11 @@ const getItems = (content) => {
     return content.map( (item, i) => {
         switch (item.type) {
             case 'subtitle':
-                return <SubTitle title={item.subtitle.title} subtext={item.subtitle.subtext}/>
+                return <SubTitle key={i} title={item.subtitle.title} subtext={item.subtitle.subtext}/>
             case 'paragraph':
-                return <p>{item.paragraph}</p>
+                return <p key={"resumeParagraph" + i}>{item.paragraph}</p>
             case 'list':
-                return <UList items={item.list} />
+                return <UList key={'resumeList' + i} items={item.list} />
             default:
                 return <p>can't find component</p>
         }

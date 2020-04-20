@@ -8,6 +8,5 @@ export const pageLayout = makeStyles({
         borderStyle: 'solid',
         borderWidth: '5px',
         margin: 'auto',
-
     }
 })

@@ -1,9 +1,9 @@
-import React, { memo } from 'react'
+import React from 'react'
 
-export const UList = memo(function UList ({items}) {
+export const UList = function UList ({items}) {
     return (
         <ul>
-            { items.map((item, i) => <li key={i}>{item}</li> ) }
+            { items.map((item, i) => <li key={'list-item' + i}>{item}</li> ) }
         </ul>
     )
-})
+}
