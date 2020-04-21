@@ -1,10 +1,10 @@
-import React, { memo } from 'react'
+import React from 'react'
 import { SectionHeader, SubTitle, UList } from 'components/parts/text/index'
 
 /* think about moving this into a util function */
 // also name this a lot better
-const getItems = (content) => {
-    return content.map( (item, i) => {
+const getItems = (content:Array<any>) => {
+    return content.map( (item:any, i:number) => {
         switch (item.type) {
             case 'subtitle':
                 return <SubTitle key={i} title={item.subtitle.title} subtext={item.subtitle.subtext}/>
@@ -18,11 +18,11 @@ const getItems = (content) => {
     })
 }
 
-export const ResumeBlock = memo(function ResumeBlock({sectionHeader, content}) {
+export const ResumeBlock:React.FC<any> = ({sectionHeader, content}) => {
     return (
         <div style={{textAlign: 'left'}}>
-            <SectionHeader sectionTitle={sectionHeader.sectionTitle} subtext={sectionHeader.subtext}/>
+            <SectionHeader title={sectionHeader.sectionTitle} subtext={sectionHeader.subtext}/>
             { getItems(content) }
         </div>
     )
-})
+}

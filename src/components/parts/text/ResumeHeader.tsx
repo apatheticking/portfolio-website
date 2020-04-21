@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function ResumeHeader() {
+export const ResumeHeader: React.FC<null> = () => {
     return (
         <div>
             <h1>Jeffrey Lee</h1>
@@ -10,3 +10,4 @@ export function ResumeHeader() {
         </div>
     )
 }
+
