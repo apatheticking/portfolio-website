@@ -1,4 +1,5 @@
 import React from 'react'
+import TopNavBar from 'components/nav/TopNavBar'
 import { Switch, Route } from 'react-router-dom'
 import { 
   HomePage,
@@ -12,6 +13,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <TopNavBar />
       <Switch>
         <Route component={HomePage} path="/" exact />
         <Route component={Resume} path="/resume" />
