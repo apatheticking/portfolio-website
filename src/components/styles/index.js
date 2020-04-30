@@ -5,4 +5,9 @@ export { sectionHeaderStyle } from './text/sectionHeader'
 export { pageLayout } from './layouts/pagelayout'
 
 //UI
-export { navbarStyle } from './ui/navbarStyle'
+export { 
+    topNavbarStyle, 
+    leftNavbarStyle, 
+    rightNavbarStyle, 
+    bottomNavbarStyle 
+} from './ui/navbarStyle'
