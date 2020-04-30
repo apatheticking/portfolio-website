@@ -1,5 +1,5 @@
 import React from 'react'
-import TopNavBar from 'components/nav/TopNavBar'
+import { FourCornerNav } from 'components/nav/index'
 import { Switch, Route } from 'react-router-dom'
 import { 
   HomePage,
@@ -10,10 +10,13 @@ import {
 } from './components/views/index'
 import './App.css';
 
+import { navbarStyle } from 'components/styles/index'
+
 function App() {
   return (
     <div className="App">
-      <TopNavBar />
+      {/* <NavBar linkTo={'resume'} linkName={'Resume'} linkStyle={navbarStyle}/> */}
+      <FourCornerNav />
       <Switch>
         <Route component={HomePage} path="/" exact />
         <Route component={Resume} path="/resume" />
