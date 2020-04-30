@@ -1,5 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles'
 //TODO: refactor css to be dry
+export const navContainer = makeStyles({
+    root: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'flex-start',
+    }
+});
+
 export const topNavbarStyle = makeStyles({
     root: {
         position: 'fixed',
@@ -15,11 +23,13 @@ export const topNavbarStyle = makeStyles({
 
 export const leftNavbarStyle = makeStyles({
     root: {
-        position: 'absolute',
+        position: 'fixed',
         left: '0',
-        top:'0',
+        top:'100%',
+        width: '100vh',
         background: '#30342F',
         transform: 'rotate(270deg)',
+        transformOrigin: 'top left',
         '& a':{
             color: 'white',
             textDecoration: 'none'
@@ -31,8 +41,11 @@ export const rightNavbarStyle = makeStyles({
     root: {
         position: 'fixed',
         right: '0',
-        width: '100%',
+        top:'100%',
+        width: '100vh',
         background: '#30342F',
+        transform: 'rotate(90deg)',
+        transformOrigin: 'top right',
         '& a':{
             color: 'white',
             textDecoration: 'none'

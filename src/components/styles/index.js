@@ -6,6 +6,7 @@ export { pageLayout } from './layouts/pagelayout'
 
 //UI
 export { 
+    navContainer,
     topNavbarStyle, 
     leftNavbarStyle, 
     rightNavbarStyle, 
