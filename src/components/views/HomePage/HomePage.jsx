@@ -7,7 +7,7 @@ export function HomePage() {
         <>
             <SplashPage />
             <div id={'projects'}/>
-            <Projects/>
+            <Projects />
         </>
     )
 }
