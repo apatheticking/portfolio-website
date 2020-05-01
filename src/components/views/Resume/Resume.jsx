@@ -2,39 +2,25 @@ import React from 'react'
 import { ResumeBlock } from 'components/layout/index'
 import { ResumeHeader } from 'components/parts/text/index'
 import { pageLayout } from 'components/styles/index' 
-import { 
-    ResumeSummary,
-    ResumeExperience,
-    ResumeEducation,
-    ResumeProjects
-} from './resumeData'
+import { sectionHeaderStyle } from 'components/styles/index'
+import { ResumeData } from './resumeData'
 
 export function Resume() {
     const classes = pageLayout()
+    const headerStyle = sectionHeaderStyle()
     return (
         <div className={classes.root} >
             <ResumeHeader />
-            {/* add a array.map to repeat the resumeBlocks*/}
-            <ResumeBlock 
-                key="resume-summary"
-                sectionHeader={ResumeSummary.sectionHeader} 
-                content={ResumeSummary.content}
-            />
-            <ResumeBlock 
-                key='resume-experience'
-                sectionHeader={ResumeExperience.sectionHeader} 
-                content={ResumeExperience.content}
-            />
-            <ResumeBlock 
-                key='resume-education'
-                sectionHeader={ResumeEducation.sectionHeader} 
-                content={ResumeEducation.content}
-            />
-            <ResumeBlock 
-                key='resume-project'
-                sectionHeader={ResumeProjects.sectionHeader} 
-                content={ResumeProjects.content}
-            />
+            {
+                ResumeData.map( (section, i)=> {
+                    return <ResumeBlock
+                        key={i}
+                        sectionHeader={section.sectionHeader} 
+                        content={section.content}
+                        sectionStyle={headerStyle}
+                    />
+                })
+            }
         </div>
     )
 }
