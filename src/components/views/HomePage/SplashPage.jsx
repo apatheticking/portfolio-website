@@ -1,6 +1,6 @@
 import React from 'react'
 import { SectionHeader } from 'components/parts/text/index'
-import { blockStyle } from 'components/styles/index'
+import { blockFrame, blockAlignment } from 'components/styles/index'
 import { makeStyles } from '@material-ui/core/styles'
 
 const styles = makeStyles({
@@ -9,17 +9,19 @@ const styles = makeStyles({
         textAlign: 'left',
         marginLeft: '10%',
             '& h2': {
-                fontSize: '48px',
+                fontSize: '56px',
                 marginBottom: '0px'
             }
     }
 })
 
 export default function SplashPage() {
-    const classes = blockStyle()
+    const frameCss = blockFrame()
+    const aligntmentCss = blockAlignment()
     const sectionStyles = styles()
+
     return (
-        <div className={classes.root}>
+        <div className={frameCss.root + " " + aligntmentCss.root}>
             <SectionHeader 
                 title={'Jeffrey Lee'}
                 subtext={'Web Developer'}

@@ -4,7 +4,7 @@ export { sectionHeaderStyle } from './text/sectionHeader'
 //Layouts
 export { pageLayout } from './layouts/pagelayout'
 
-export { blockStyle } from './layouts/blockStyle'
+export { blockStyle, blockFrame, blockAlignment } from './layouts/blockStyle'
 
 //UI
 export { 

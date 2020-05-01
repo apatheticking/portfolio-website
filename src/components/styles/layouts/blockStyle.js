@@ -10,3 +10,19 @@ export const blockStyle = makeStyles({
         margin: '0px 18px 0px 18px'
     }
 })
+
+export const blockFrame = makeStyles({
+    root: {
+        backgroundColor: '#30342F', 
+        height:'100vh', 
+        margin: '0px 18px 0px 18px'
+    }
+})
+
+export const blockAlignment = makeStyles({
+    root: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'left',
+    }
+})
