@@ -1,4 +1,4 @@
-export { HomePage }  from './HomePage'
+export { HomePage }  from './HomePage/HomePage'
 export { Resume } from './Resume/Resume'
 export { ContactMe } from './ContactMe'
 export { Projects } from './Projects'
