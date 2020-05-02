@@ -7,7 +7,9 @@ const projectStyles = makeStyles({
         color: 'white',
         marginTop: '0px',
             '& h2': {
+                paddingTop: '24px',
                 marginTop: '0px',
+                marginBottom: '0px',
                 marginLeft: '18px',
                 textAlign: 'left',
                 fontSize: '36px'
@@ -19,7 +21,7 @@ export function Projects() {
     const frameCss = blockFrame()
     const textCss = projectStyles()
     return (
-        <div className={frameCss.root + ' + ' + textCss.root}>
+        <div id={'projects'} className={frameCss.root + ' + ' + textCss.root}>
             <h2>Projects</h2>
         </div>
     )

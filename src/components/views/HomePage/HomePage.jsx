@@ -6,7 +6,7 @@ export function HomePage() {
     return (
         <>
             <SplashPage />
-            <div id={'projects'}/>
+            {/* <div id={'projects'}/> */}
             <Projects />
         </>
     )

@@ -10,7 +10,7 @@ export const blockStyle = makeStyles({
         margin: '0px 18px 0px 18px'
     }
 })
-
+//do i still want to split this up?
 export const blockFrame = makeStyles({
     root: {
         backgroundColor: '#30342F', 
