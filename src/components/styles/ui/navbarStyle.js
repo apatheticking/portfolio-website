@@ -30,9 +30,10 @@ export const leftNavbarStyle = makeStyles({
         background: '#30342F',
         transform: 'rotate(270deg)',
         transformOrigin: 'top left',
-        '& a':{
+        '& span':{
             color: 'white',
-            textDecoration: 'none'
+            textDecoration: 'none',
+            cursor: 'pointer',
         }
     }
 });
