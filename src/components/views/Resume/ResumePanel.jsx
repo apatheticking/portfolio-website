@@ -4,9 +4,9 @@ import { Resume } from 'components/views/index'
 export function ResumePanel() {
     return (
         <div
-            style={{height: '1000px', width: 'inherit', backgroundColor: 'red', overflow: 'scroll'}}
+            style={{height: '90vh', width: '80vw', backgroundColor: 'white', overflow: 'auto'}}
         >
-            <div style={{transform: 'rotate(90deg)'}}>
+            <div>
                 <Resume />
             </div>
         </div>

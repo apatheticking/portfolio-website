@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Slide, Paper, FormControlLabel } from '@material-ui/core'
-import { ResumePanel } from 'components/views/index'
+import { ResumePanel, ContactMe } from 'components/views/index'
 
-export function ExpandNav({ title, style }) {
+export function ExpandSideNav({ title, child, direction, style }) {
     const classes = style()
     const [ isExtended, setExtended ] = useState(false)
     
@@ -12,18 +12,18 @@ export function ExpandNav({ title, style }) {
 
     return (
         <div className={classes.root}>
-            <FormControlLabel
+            {/* <FormControlLabel
                 control={<span onClick={extendNav}>{title}</span>}
-            />
-
+            /> */}
+            <span onClick={extendNav}>{title}</span>
             <Slide 
-                direction="down"
+                direction={direction}
                 in={isExtended}
                 mountOnEnter 
                 unmountOnExit
             > 
                 <Paper>
-                     { isExtended ? <ResumePanel /> : null }
+                     <ResumePanel onClick={extendNav}/>
                 </Paper>        
             </Slide>
 

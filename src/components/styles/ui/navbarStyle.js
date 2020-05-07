@@ -23,33 +23,37 @@ export const topNavbarStyle = makeStyles({
 
 export const leftNavbarStyle = makeStyles({
     root: {
+        display: 'flex',
+        alignItems: 'center',
         position: 'fixed',
         left: '0',
-        top:'100%',
-        width: '100vh',
         background: '#30342F',
-        transform: 'rotate(270deg)',
-        transformOrigin: 'top left',
-        '& span':{
-            color: 'white',
-            textDecoration: 'none',
-            cursor: 'pointer',
-        }
+        height: '100vh',
+        width: '18px',
+            '& span': {
+                color: 'white',
+                cursor: 'pointer',
+                transform: 'rotate(-90deg)',
+                transformOrigin: 'top left',
+            }
     }
 });
 
 export const rightNavbarStyle = makeStyles({
     root: {
+        display: 'flex',
+        alignItems: 'center',
         position: 'fixed',
         right: '0',
-        top:'100%',
-        width: '100vh',
+        height: '100vh',
+        width: '18px',
         background: '#30342F',
-        transform: 'rotate(90deg)',
-        transformOrigin: 'top right',
-        '& a':{
+        '& span':{
+            whiteSpace: 'nowrap',
             color: 'white',
-            textDecoration: 'none'
+            cursor: 'pointer',
+            transform: 'rotate(90deg)',
+            transformOrigin: 'top left',
         }
     }
 });
