@@ -52,8 +52,8 @@ export const rightNavbarStyle = makeStyles({
             whiteSpace: 'nowrap',
             color: 'white',
             cursor: 'pointer',
-            transform: 'rotate(90deg)',
-            transformOrigin: 'top left',
+            // transform: 'rotate(90deg)',
+            // transformOrigin: 'top left',
         }
     }
 });

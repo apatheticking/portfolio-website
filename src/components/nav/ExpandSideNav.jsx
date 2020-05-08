@@ -3,6 +3,7 @@ import { Slide, Paper, FormControlLabel } from '@material-ui/core'
 import { ResumePanel, ContactMe } from 'components/views/index'
 
 export function ExpandSideNav({ title, child, direction, style }) {
+    console.log(direction)
     const classes = style()
     const [ isExtended, setExtended ] = useState(false)
     
